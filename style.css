@@ -1,78 +1,158 @@
+@import url("https://fonts.googleapis.com/css?family=Corben:700");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 .container {
   width: 100%;
   height: 100vh;
   background-color: bisque;
-  display: flex;
-  flex-direction: column;
-  font-family: 'Times New Roman', Times, serif;
-}
-.header{
-    display: flex;
-}
-.logo img {
-  width: 70px;
-  cursor: pointer;
-}
-.navbar{
-    width: 85%;
-    margin: auto;
-    padding: 35px ;
-    padding-left: 45rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-}
-.navbar ul li  {
-  font-size: 20px;
-  display: inline-block;
-  list-style: none;
-  margin: 0 20px;
-  position: relative;
-}
-.navbar li a {
-  text-decoration: none;
-  font-size: 25px;
-  font-weight: 600;
-  cursor: pointer;
- 
-}
-.navbar ul li::after{
-    content: '';
-    height: 3px;
-    width: 0;
-    background: #ca4965;
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    transition: 0.5s;
-}
-.navbar ul li:hover::after{
-    width: 100%;
 }
 
-.img-section{
-   display: flex;
-   gap: 1.5rem;
+
+.header {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.img-section img{
-    width: 350px;
-    height: 250px;
+
+
+.navbar ul {
+  list-style: none;
+  font-size: 20px;
+  display: flex;
+  gap: 1.5rem;
+ 
 }
-.content{
-    padding: 5rem ;
+
+.navbar ul li a {
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
 }
-.content h1{
-    font-size: 60px;
-    text-transform: uppercase;
-    text-align: center;
-    color: red;
-    font-weight: 600;
-    
+
+.navbar ul li a:hover {
+  color: #ca4965;
 }
+
+.navbar ul li a::after {
+  content: "";
+  height: 3px;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: black;
+  width: 0;
+  transition: 0.5s;
+}
+.navbar ul li a:hover::after {
+  width: 100%;
+}
+.logo img {
+  width: 100px;
+}
+ 
+.navbar ul li::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: #ca4965;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+.navbar ul li:hover::after {
+  width: 100%;
+}
+
+.img-section {
+  justify-content: center;
+  display: flex;
+  gap: 1.5rem;
+}
+.img-section img {
+  width: 250px;
+  height: auto;
+  transition: 1s;
+  animation: imagess;
+  
+}
+.img-section a img:hover {
+  transition-delay: 0.2s;
+  width: 350px;
+  height: auto;
+}
+
+@keyframes imagess{
+  0%{
+    transform: translate(0);
+    border-radius: 5px;
+  }
+
+  100%{
+    transform: translate(100%);
+    border-radius: 5px;
+  }
+}
+.content {
+  padding: 3rem;
+  width: 700px;
+}
+
+.content h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+  text-align: center;
+  color: red;
+  font-weight: 600;
+  letter-spacing: 1.3rem;
+}
+
+.box{
+  background-color: #ca4965;
+  width: 100px;
+  height: 50px;
+  margin: 2px;
+}
+.x{
+  transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: cubic-bezier(1, 0.14, 0.58, 1);
+  border: 4px solid black;
+
+}
+.x:hover{
+  transform: translateX(150px);
+  background-color: blue;
+  width: 300px;
+}
+.y{
+  transition: all 2s ease-in-out;
+}
+.y:hover{
+  background-color: aqua;
+  transform: translateY(200px);
+  height: 100px;
+}
+
+.btn-div{
+  text-align: center;
+  
+}
+button.btn{
+  background-color: aqua;
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.3rem;
+  transition-property:background-color;
+  } 
+  button.btn:active{
+  background-color: red;
+  color: wheat;
+  transform: scale (95%);
+  }
